@@ -8,7 +8,7 @@ public class FirstPersonController : MonoBehaviour
     [SerializeField] private float walkSpeed = 5f;
     [SerializeField] private float sprintSpeed = 8f;
     [SerializeField] private float jumpHeight = 2f;
-    [SerializeField] private float gravity = -9.81f;
+    [SerializeField] private float gravity = -18f;
     
     [Header("Mouse Look Settings")]
     [SerializeField] private float mouseSensitivity = 2f;
@@ -17,7 +17,7 @@ public class FirstPersonController : MonoBehaviour
     
     [Header("Ground Check")]
     [SerializeField] private Transform groundCheck;
-    [SerializeField] private float groundDistance = 0.4f;
+    [SerializeField] private float groundDistance = 0.2f;
     [SerializeField] private LayerMask groundMask;
     
     // Components
@@ -105,13 +105,11 @@ public class FirstPersonController : MonoBehaviour
     public void OnMove(InputAction.CallbackContext context)
     {
         moveInput = context.ReadValue<Vector2>();
-        Debug.Log("He movin");
     }
     
     public void OnLook(InputAction.CallbackContext context)
     {
         lookInput = context.ReadValue<Vector2>();
-        Debug.Log("He lookin");
     }
     
     public void OnJump(InputAction.CallbackContext context)

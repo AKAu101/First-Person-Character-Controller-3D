@@ -545,7 +545,7 @@ MonoBehaviour:
   walkSpeed: 5
   sprintSpeed: 8
   jumpHeight: 2
-  gravity: -9.81
+  gravity: -18
   mouseSensitivity: 0.1
   maxLookAngle: 80
   cameraTransform: {fileID: 330585546}
